@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/user1DB");
+mongoose.connect("mongodb://127.0.0.1:27017/mongod?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2/user1DB");
 const user1Schema = {
   email: String,
   password: String
