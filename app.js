@@ -19,8 +19,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+mongoose.connect("mongodb+srv://zexor11-render:zexor11@cluster0.ijxfsln.mongodb.net/user1db");
 
-mongoose.connect("mongodb://127.0.0.1:27017/mongod?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2/user1DB");
 const user1Schema = {
   email: String,
   password: String
